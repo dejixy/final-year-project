@@ -1,0 +1,4 @@
+lot,tech,days,tmin,tmax,rhmin,rhmax,gmci
+A1,HMS,210,21,31,56,94,12.0
+A2,PP,210,21,31,56,94,12.0
+A3,PP_AP,90,19,28,61,95,14.5

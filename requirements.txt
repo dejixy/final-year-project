@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn==1.8.0
+xgboost==3.4.1
+shap==0.52.0
+scipy
+matplotlib
