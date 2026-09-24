@@ -1,0 +1,78 @@
+{
+  "class_curves": {
+    "hermetic": {
+      "shape": "linear",
+      "params": [
+        0.4046028362919073
+      ]
+    },
+    "pp_open": {
+      "shape": "linear",
+      "params": [
+        3.9496078666805823
+      ]
+    },
+    "pp_treated": {
+      "shape": "linear",
+      "params": [
+        2.182840235100393
+      ]
+    }
+  },
+  "tech_curves": {
+    "HBT": {
+      "shape": "linear",
+      "params": [
+        0.259355891570155
+      ]
+    },
+    "HBZ": {
+      "shape": "linear",
+      "params": [
+        0.14205787458023378
+      ]
+    },
+    "HMS": {
+      "shape": "linear",
+      "params": [
+        0.7379205528241884
+      ]
+    },
+    "PBO": {
+      "shape": "linear",
+      "params": [
+        0.1292192965599022
+      ]
+    },
+    "PP": {
+      "shape": "linear",
+      "params": [
+        3.9496078666805823
+      ]
+    },
+    "PP_AP": {
+      "shape": "linear",
+      "params": [
+        2.2702152305582346
+      ]
+    },
+    "PP_ML": {
+      "shape": "linear",
+      "params": [
+        2.1403888009580037
+      ]
+    },
+    "PP_SL": {
+      "shape": "linear",
+      "params": [
+        2.116843478567079
+      ]
+    },
+    "SPB": {
+      "shape": "linear",
+      "params": [
+        0.13212861994463082
+      ]
+    }
+  }
+}

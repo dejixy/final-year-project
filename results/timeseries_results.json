@@ -1,0 +1,251 @@
+{
+  "n_rows": 152,
+  "n_units": 26,
+  "units_multi_timepoint": 17,
+  "rows_in_multi_units": 125,
+  "why_not_arima": "2-3 sampling points per unit; ARIMA/ARIMAX/LSTM are not identifiable on series of that length.",
+  "class_fits": {
+    "hermetic": {
+      "n": 93,
+      "aic": {
+        "linear": 10.0,
+        "power": 12.0,
+        "expo": 12.0
+      },
+      "selected": "linear",
+      "params": [
+        0.4046
+      ]
+    },
+    "pp_open": {
+      "n": 6,
+      "aic": {
+        "linear": 17.4,
+        "power": 19.4,
+        "expo": 19.4
+      },
+      "selected": "linear",
+      "params": [
+        3.9496
+      ]
+    },
+    "pp_treated": {
+      "n": 53,
+      "aic": {
+        "linear": 127.8,
+        "power": 129.7,
+        "expo": 129.8
+      },
+      "selected": "linear",
+      "params": [
+        2.1828
+      ]
+    }
+  },
+  "tech_curves": {
+    "HBT": {
+      "n": 33,
+      "durations": 8,
+      "shape": "linear",
+      "params": [
+        0.2594
+      ],
+      "loss_at": {
+        "30d": 0.08,
+        "90d": 0.23,
+        "180d": 0.47,
+        "270d": 0.7
+      },
+      "days_to": {
+        "1.0%": 386,
+        "3.0%": null,
+        "5.0%": null
+      }
+    },
+    "HBZ": {
+      "n": 3,
+      "durations": 1,
+      "shape": "linear",
+      "params": [
+        0.1421
+      ],
+      "loss_at": {
+        "30d": 0.04,
+        "90d": 0.13,
+        "180d": 0.26,
+        "270d": 0.38
+      },
+      "days_to": {
+        "1.0%": null,
+        "3.0%": null,
+        "5.0%": null
+      }
+    },
+    "HMS": {
+      "n": 36,
+      "durations": 8,
+      "shape": "linear",
+      "params": [
+        0.7379
+      ],
+      "loss_at": {
+        "30d": 0.22,
+        "90d": 0.66,
+        "180d": 1.33,
+        "270d": 1.99
+      },
+      "days_to": {
+        "1.0%": 136,
+        "3.0%": null,
+        "5.0%": null
+      }
+    },
+    "PBO": {
+      "n": 15,
+      "durations": 4,
+      "shape": "linear",
+      "params": [
+        0.1292
+      ],
+      "loss_at": {
+        "30d": 0.04,
+        "90d": 0.12,
+        "180d": 0.23,
+        "270d": 0.35
+      },
+      "days_to": {
+        "1.0%": null,
+        "3.0%": null,
+        "5.0%": null
+      }
+    },
+    "PP": {
+      "n": 6,
+      "durations": 1,
+      "shape": "linear",
+      "params": [
+        3.9496
+      ],
+      "loss_at": {
+        "30d": 1.18,
+        "90d": 3.55,
+        "180d": 7.11,
+        "270d": 10.66
+      },
+      "days_to": {
+        "1.0%": 26,
+        "3.0%": 76,
+        "5.0%": 127
+      }
+    },
+    "PP_AP": {
+      "n": 23,
+      "durations": 6,
+      "shape": "linear",
+      "params": [
+        2.2702
+      ],
+      "loss_at": {
+        "30d": 0.68,
+        "90d": 2.04,
+        "180d": 4.09,
+        "270d": 6.13
+      },
+      "days_to": {
+        "1.0%": 45,
+        "3.0%": 133,
+        "5.0%": 221
+      }
+    },
+    "PP_ML": {
+      "n": 15,
+      "durations": 4,
+      "shape": "linear",
+      "params": [
+        2.1404
+      ],
+      "loss_at": {
+        "30d": 0.64,
+        "90d": 1.93,
+        "180d": 3.85,
+        "270d": 5.78
+      },
+      "days_to": {
+        "1.0%": 47,
+        "3.0%": 141,
+        "5.0%": 234
+      }
+    },
+    "PP_SL": {
+      "n": 15,
+      "durations": 4,
+      "shape": "linear",
+      "params": [
+        2.1168
+      ],
+      "loss_at": {
+        "30d": 0.64,
+        "90d": 1.91,
+        "180d": 3.81,
+        "270d": 5.72
+      },
+      "days_to": {
+        "1.0%": 48,
+        "3.0%": 142,
+        "5.0%": 237
+      }
+    },
+    "SPB": {
+      "n": 6,
+      "durations": 2,
+      "shape": "linear",
+      "params": [
+        0.1321
+      ],
+      "loss_at": {
+        "30d": 0.04,
+        "90d": 0.12,
+        "180d": 0.24,
+        "270d": 0.36
+      },
+      "days_to": {
+        "1.0%": null,
+        "3.0%": null,
+        "5.0%": null
+      }
+    }
+  },
+  "leave_one_unit_out": {
+    "curve": {
+      "RMSE": 2.2553862273387217,
+      "MAE": 1.2590209452764116,
+      "R2": 0.21878223512636608,
+      "Bias(obs-pred)": 0.0047402240048695365
+    },
+    "mean": {
+      "RMSE": 2.6174332643074054,
+      "MAE": 1.8858016367338972,
+      "R2": -0.05215929784249962,
+      "Bias(obs-pred)": -0.27401078868532686
+    },
+    "persistence": {
+      "RMSE": 2.4085116413779346,
+      "MAE": 0.9980736092758886,
+      "R2": 0.10910245528613494,
+      "Bias(obs-pred)": 0.8184587030777409
+    },
+    "tech_mean": {
+      "RMSE": 2.880102376675186,
+      "MAE": 1.8538143351489065,
+      "R2": -0.27393160906997016,
+      "Bias(obs-pred)": -0.17170767595644246
+    },
+    "xgboost": {
+      "RMSE": 2.379037199664395,
+      "MAE": 1.3725766564489463,
+      "R2": 0.13077396005189057,
+      "Bias(obs-pred)": -0.07218651622637699
+    }
+  },
+  "n_eval_rows": 146
+}
