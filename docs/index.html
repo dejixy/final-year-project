@@ -45,8 +45,9 @@ input[type=range]::-moz-range-thumb{width:12px;height:12px;background:var(--acce
 .tag{color:var(--c)}
 table{width:100%;border-collapse:collapse;margin-top:4px}
 td{padding:2px 0;white-space:nowrap}
-td.b{width:100%;color:var(--c2);padding-left:8px;overflow:hidden;text-overflow:clip}
-td.n{text-align:right;padding-left:8px;color:var(--c2)}
+td.b{width:100%}
+td:first-child{min-width:15ch;padding-right:12px}
+td.n{text-align:left;color:var(--c2);font-variant-numeric:tabular-nums}
 tr.on td:first-child{color:var(--accent)}
 pre{margin:4px 0 0;color:var(--dim);overflow-x:auto}
 pre b{color:var(--c);font-weight:400}
@@ -269,9 +270,10 @@ function draw(){
    .sort((a,b)=>a[1]-b[1]);
  const mx=Math.max(...rows.map(r=>r[1]),.5);
  $('rank').innerHTML=rows.map(([t,v])=>{
-  const col=`var(${band(v)[2]})`;
-  return `<tr class="${t===st.tech?'on':''}" style="--c2:${col}"><td>${t.toLowerCase().padEnd(6)}</td>`+
-   `<td class="b">${bar(v,mx)}</td><td class="n">${v.toFixed(2)}</td></tr>`;}).join('');
+  const bn=band(v)[1];                       // rank list: green / grey / red only
+  const col = bn==='low' ? 'var(--low)' : bn==='severe' ? 'var(--sev)' : 'var(--dim)';
+  return `<tr class="${t===st.tech?'on':''}" style="--c2:${col}"><td>${t.toLowerCase()}</td>`+
+   `<td class="n">${v.toFixed(2)}</td><td class="b"></td></tr>`;}).join('');
  $('safe').innerHTML=[1,3,5].map(thr=>{const dd=daysTo(st.tech,thr);
   const txt=dd?`${String(dd).padStart(3)} days  (${(dd/30).toFixed(1)} months)`:`not reached within 400 days`;
   return `${thr}% loss  ${dd?"<b>":""}${txt}${dd?"</b>":""}`;}).join("\n");
